@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Persona Chatbot</title>
+    <link rel="stylesheet" href="/static/styles.css">
+  </head>
+  <body>
+    <main class="app-shell">
+      <header>
+        <p class="eyebrow">History, in conversation</p>
+        <h1>Persona Chatbot</h1>
+        <p class="roleplay-banner" role="status"><strong>AI role-play:</strong> Responses are generated simulations, not messages from real historical figures.</p>
+      </header>
+      <section class="chat-panel" aria-label="Historical figure chat">
+        <label for="figure">Choose a historical figure</label>
+        <select id="figure" name="figure">
+          <option>Mahatma Gandhi</option>
+          <option>Rani Lakshmibai</option>
+          <option>Dr. B. R. Ambedkar</option>
+          <option>Nelson Mandela</option>
+        </select>
+        <div id="messages" class="messages" aria-live="polite">
+          <article class="message assistant"><span>AI role-play</span><p>Ask a question to begin this historical conversation.</p></article>
+        </div>
+        <form id="chat-form">
+          <label class="sr-only" for="message">Your question</label>
+          <textarea id="message" placeholder="Ask a question about history..." required maxlength="2000"></textarea>
+          <button type="submit">Send</button>
+        </form>
+        <p id="error" class="error" role="alert"></p>
+      </section>
+    </main>
+    <script src="/static/app.js"></script>
+  </body>
+</html>
